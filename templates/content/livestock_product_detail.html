@@ -1,0 +1,21 @@
+{{define "content"}}
+	<div class="row">
+		<div class="columns small-12">
+			<div class="row">
+				<div class="columns small-12">
+					<ul class="row livestockproducts small-block-grid-4">
+						{{range .LivestockProducts}}
+							<li class="livestockproduct">
+								<img src="/img/{{.ImageURL}}" alt="{{.ImageURL}}" />
+									<h3>{{.Name}}</h3>
+								</a>
+								<p>{{.Description}}</p>
+								<p>${{.Price | printf "%.2f"}}</p>
+							</li>
+						{{end}}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+{{end}}

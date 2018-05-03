@@ -18,9 +18,9 @@ func (m mockRows) Scan(dest ...interface{}) error {
 	return nil
 }
 func (m mockRows) Next() bool{
-  return false;
+    return false;
 }
 
 func (m mockRows) Close() error {
-  return nil
+    return nil
 }

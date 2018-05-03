@@ -6,10 +6,10 @@ import (
 )
 
 var (
-	homeController         home
-	livestockController 	 livestock
-	beeController					 bee
-	fruitvegController		 fruitveg
+	homeController      home
+	livestockController livestock
+	beeController	    bee
+	fruitvegController  fruitveg
 )
 
 func Startup(templates map[string]*template.Template) {

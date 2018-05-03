@@ -1,10 +1,10 @@
 package model
 
 type Livestock struct {
-  ID          int
-  ImageURL    string
-  Name        string
-  Description string
+    ID          int
+    ImageURL    string
+    Name        string
+    Description string
 }
 
 var livestock []Livestock = []Livestock{Livestock{
@@ -12,23 +12,23 @@ var livestock []Livestock = []Livestock{Livestock{
     ImageURL: "sheep.png",
     Name: "Sheep",
     Description: `Let there be wool! Whether you want live sheep to add to your flock
-									or lamb chops with your parsley.`,
-  }, Livestock{
+                                    or lamb chops with your parsley.`,
+    }, Livestock{
     ID: 2,
     ImageURL: "pigs.png",
     Name: "Pigs/Hogs",
     Description: `That's some pig! We believe a happy hog is healthy hog. Pick up a hog or pig of
-									your choice, or send them to a select butcher for prime cuts.`,
-  }, Livestock{
+                                    your choice, or send them to a select butcher for prime cuts.`,
+    }, Livestock{
     ID: 3,
     ImageURL: "chicks.png",
     Name: "Chicks/Chickens",
     Description: `From eggs, to chicks, to whole chickens: you ask, we provide.`,
-  },
+    },
 }
 
 func GetLivestock() []Livestock {
-  return livestock
+    return livestock
 }
 
 // NOTE: This is if we were pulling livestock from the db.

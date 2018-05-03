@@ -3,8 +3,6 @@ package controller
 import (
 	"html/template"
 	"net/http"
-
-	//"github.com/bfraz/webapp/model"
 	"github.com/bfraz/webapp/viewmodel"
 )
 
@@ -18,7 +16,6 @@ func (h home) registerRoutes() {
 }
 
 func (h home) handleHome(w http.ResponseWriter, r *http.Request) {
-
 	vm := viewmodel.NewHome()
 	w.Header().Add("Content-Type", "text/html")
 	h.homeTemplate.Execute(w, vm)

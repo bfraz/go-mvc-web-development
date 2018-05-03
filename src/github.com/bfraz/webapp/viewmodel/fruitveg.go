@@ -1,13 +1,13 @@
 package viewmodel
 
 import (
-  "github.com/bfraz/webapp/model"
+    "github.com/bfraz/webapp/model"
 )
 
 type FruitVegPage struct {
-  Title    string
-  Active   string
-  FruitVegs []FruitVeg
+    Title    string
+    Active   string
+    FruitVegs []FruitVeg
 }
 
 type FruitVeg struct {
@@ -18,15 +18,15 @@ type FruitVeg struct {
 }
 
 func NewFruitVeg(fvs []model.FruitVeg) FruitVegPage{
-  result := FruitVegPage {
-    Title:    "Humble Homesteaders",
-    Active:   "fruitveg",
-    FruitVegs: []FruitVeg{},
-  }
-  for _, fv := range fvs {
-		result.FruitVegs = append(result.FruitVegs, fvToVM(&fv))
-	}
-  return result
+    result := FruitVegPage {
+        Title:    "Humble Homesteaders",
+        Active:   "fruitveg",
+        FruitVegs: []FruitVeg{},
+    }
+    for _, fv := range fvs {
+        result.FruitVegs = append(result.FruitVegs, fvToVM(&fv))
+    }
+    return result
 }
 
 func fvToVM(fv *model.FruitVeg) FruitVeg {

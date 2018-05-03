@@ -19,17 +19,17 @@ func GetLivestockProductsWithLivestockID(livestockID int) ([]LivestockProduct, e
 		FROM livestockproduct
 		WHERE livestockid = $1`, livestockID)
 	if err != nil {
-    return nil, err
-  }
-  defer rows.Close()
-  for rows.Next() {
+        return nil, err
+    }
+    defer rows.Close()
+    for rows.Next() {
     ls := LivestockProduct{}
     if err := rows.Scan(&ls.Name, &ls.Description, &ls.Price, &ls.ImageURL); err != nil {
-      return nil, err
+        return nil, err
     }
-    result = append(result, ls)
-  }
-	return result, nil
+        result = append(result, ls)
+    }
+    return result, nil
 }
 
 ////////////////////////

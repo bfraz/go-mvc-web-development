@@ -10,10 +10,10 @@ type LivestockProductDetail struct {
 	LivestockProducts []LivestockProduct
 }
 type LivestockProduct struct {
-  	Name             string
+  	Name        string
   	Description string
-  	Price    float32
-  	ImageURL         string
+  	Price       float32
+  	ImageURL    string
 
 }
 
@@ -33,7 +33,7 @@ func lsptoVM(lsp model.LivestockProduct) LivestockProduct {
 	return LivestockProduct{
 		Name:        lsp.Name,
 		ImageURL:    lsp.ImageURL,
-    Price:        lsp.Price,
-		Description:   lsp.Description,
+        Price:       lsp.Price,
+		Description: lsp.Description,
 	}
 }
